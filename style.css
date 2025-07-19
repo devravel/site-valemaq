@@ -11,17 +11,8 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-
-header {
-  display: flex;
-  align-items: center;
-  padding: 20px 150px;
-  background-color: #e1e5f1;
-  border-bottom: 1px solid #ccc;
-}
-
 h1 {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   color: #3249a7;
 }
 
@@ -34,24 +25,25 @@ span {
   color: #1b2859;
 }
 
-.logo {
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER SECTION*/
+header {
+  padding: 1rem 3rem;
+  background-color: #e1e5f1;
+}
+
+.header-content {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-
-.logo img {
-  height: 50px;
+.logo svg {
+  margin-left: 5rem;
 }
-
-.line {
-  flex-grow: 1;
-  height: 1px;
-  background-color: #888;
-  margin-right: 20px;
-  margin-top: 20px;
-  margin: 20px 20px 0 20px;
-}
-
 .contacts {
   display: flex;
   align-items: center;
@@ -76,30 +68,43 @@ span {
   background-color: #c0392b;
   color: white;
   padding: 8px 18px;
+  margin-bottom: 1rem;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-5px);
 }
 
 /*HERO SECTION*/
 
 #hero {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  height: auto;
+  padding: 0 1rem;
   background: linear-gradient(to right, #d9dcdb, #dcdcdc);
 }
 
 .hero-content {
   flex: 1 1 400px;
   z-index: 2;
-  padding-left: 100px;
+  padding-left: 10rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .hero-img {
   flex: 1 1 400px;
+  width: 100%;
+  height: auto;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -147,4 +152,332 @@ span {
 
 #button2 {
   background-color: #2f4ba4;
+}
+
+#button3 {
+  background: #fff;
+  color: #435399;
+}
+
+/* TYPES SECTION*/
+#types {
+  padding: 4rem 2rem;
+  background-color: #304ba4;
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+.card {
+  background-color: transparent;
+  color: #222;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.card img {
+  width: 200px;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  color: #fff;
+  text-align: center;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: center;
+  color: #d4d7ec;
+  font-weight: bold;
+}
+
+.types-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.types-header {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+.types-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.types-header p {
+  color: #e0e1ec;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* ABOUT SECTION*/
+
+#about {
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.about-content {
+  display: flex;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.about-text {
+  flex: 1 1 400px;
+}
+
+.about-text h2 {
+  max-width: 700px;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: rgb(15, 49, 69);
+}
+
+.about-text p {
+  max-width: 700px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.about-text h3 {
+  margin-top: 1.5rem;
+  font-weight: 700;
+  color: rgb(15, 49, 69);
+}
+
+.about-form {
+  flex: 1 1 400px;
+  background-color: #f9fbfc;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.about-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: rgb(15, 49, 69);
+}
+
+form input,
+textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+form button {
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.more-about {
+  display: flex;
+  flex-direction: column;
+}
+
+.more-about span::before {
+  display: inline-block;
+  content: " ";
+  width: 8px;
+  height: 8px;
+  margin-right: 5px;
+  background-color: #3249a7;
+  border-radius: 50%;
+}
+
+/* REPUTATION SECTION*/
+
+#reputation {
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.reputation-content {
+  gap: 2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 800px;
+}
+
+#reputation img {
+  flex: 1 1 400px;
+  max-width: 500px;
+  width: 60%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+}
+
+.reputation-text {
+  flex: 1 1 400px;
+  max-width: 800px;
+}
+
+.reputation-text h2 {
+  color: #304ba4;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.reputation-text p {
+  color: #9696ad;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* BENEFITS SECTION */
+
+#benefits {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 150px;
+  max-height: 200px;
+  width: 100%;
+  padding: 0 1rem;
+  background-color: #f9fbfc;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.benefit h3 {
+  font-size: 1.35rem;
+  color: #215274;
+}
+
+.benefit p {
+  font-size: 1rem;
+  color: #475763;
+}
+
+.benefit svg {
+  height: 30%;
+  width: 30%;
+}
+
+.benefit-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* TESTIMONIALS SECTION */
+#testimonials {
+  margin-top: 5rem;
+}
+
+.testimonials-slider {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-card {
+  max-width: 300px;
+  padding: 30px;
+  background-color: #f9fbfc;
+}
+
+#testimonials p {
+  color: #8d8e96;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.author {
+  font-weight: bold;
+  color: rgb(15, 49, 69);
+}
+
+#testimonials h2 {
+  color: rgb(15, 49, 69);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.stars {
+  color: rgb(234, 203, 3);
+}
+
+.carousel-dots {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  margin: 0 6px;
+  background-color: #304ba4;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #c0392b;
+}
+
+.slide-group {
+  display: none;
+}
+
+.slide-group.active {
+  display: flex;
+  gap: 15px;
 }
