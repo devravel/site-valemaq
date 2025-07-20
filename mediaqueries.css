@@ -1,0 +1,72 @@
+@media screen and (max-width: 768px) {
+  .hero-content {
+    padding-left: 1rem; /* tira o padding grande */
+    max-width: 100%; /* ocupa toda largura possível */
+    text-align: center; /* centraliza texto */
+  }
+
+  #hero {
+    justify-content: center; /* centraliza tudo */
+  }
+
+  .hero-img {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 1rem 0;
+  }
+
+  .hero-img::before {
+    display: none; /* remove gradiente que atrapalha */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr; /* só 1 coluna em telas pequenas */
+    padding: 0 1rem; /* evitar encostar na borda */
+  }
+}
+
+/* Responsivo: empilha verticalmente em telas menores */
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #faq {
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+  }
+
+  .faq-img img {
+    max-width: 100%;
+    max-height: none;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Responsividade do footer */
+@media screen and (max-width: 480px) {
+  .footer-contacts {
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+  }
+}
+
+/* Para telas pequenas, ajustar margens e paddings */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px; /* diminuir fonte para caber melhor */
+  }
+
+  header,
+  footer,
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
