@@ -102,14 +102,6 @@ header {
   max-width: 600px;
   margin: 0 auto;
 }
-
-.hero-content {
-  flex: 1 1 400px;
-  z-index: 2;
-  padding-left: 10rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
 .hero-img {
   flex: 1 1 400px;
   width: 100%;
@@ -343,6 +335,7 @@ form button {
   gap: 2rem;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   height: 67vh;
   justify-content: space-between;
   align-items: flex-start;
@@ -662,4 +655,251 @@ iframe {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .header-logo,
+  .header-contacts {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header-contacts {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .header-contacts a {
+    display: block;
+    font-size: 14px;
+    word-break: break-word;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .reputation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .reputation-item {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .benefits {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .benefit-item {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .testimonial-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .testimonial-item {
+    min-width: 100%;
+    scroll-snap-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-content {
+    padding-left: 1rem; /* tira o padding grande */
+    max-width: 100%; /* ocupa toda largura possível */
+    text-align: center; /* centraliza texto */
+  }
+
+  #hero {
+    justify-content: center; /* centraliza tudo */
+  }
+
+  .hero-img {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 1rem 0;
+  }
+
+  .hero-img::before {
+    display: none; /* remove gradiente que atrapalha */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr; /* só 1 coluna em telas pequenas */
+    padding: 0 1rem; /* evitar encostar na borda */
+  }
+}
+
+/* Responsivo: empilha verticalmente em telas menores */
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #faq {
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+  }
+
+  .faq-img img {
+    max-width: 100%;
+    max-height: none;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Responsividade do footer */
+@media screen and (max-width: 480px) {
+  .footer-contacts {
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+  }
+}
+
+/* Para telas pequenas, ajustar margens e paddings */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px; /* diminuir fonte para caber melhor */
+  }
+
+  header,
+  footer,
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+
+
+/* RESPONSIVO GERAL PARA CELULAR E TABLET */
+@media screen and (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .logo svg {
+    margin-left: 0; /* remove margin lateral */
+    width: 150px;
+  }
+
+  .contacts {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    border-bottom: none;
+  }
+
+  .hero-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-img {
+    max-width: 100%;
+    padding: 1rem 0;
+  }
+
+  .hero-img::before {
+    display: none; /* remove gradiente lateral */
+  }
+
+  #benefits {
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .reputation-content {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-content {
+    flex-direction: column;
+    max-width: 100%;
+    gap: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .types-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-contacts {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  #faq {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .faq-img img {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
 }
