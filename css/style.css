@@ -65,45 +65,24 @@ header {
   justify-content: space-around;
 }
 
-.logo svg {
+.logo img {
   margin-left: 8rem;
 }
 
 nav {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 2rem;
 }
 
 nav a p {
   font-weight: 600;
+  font-size: 1.4rem;
   color: #304ba4;
 }
 
 nav a p:hover {
   border-bottom: 2px solid #c0392b;
-}
-
-.contacts {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-top: -30px;
-  border-bottom: 1px solid #333;
-  display: none;
-}
-
-.contact a {
-  display: flex;
-  align-items: center;
-  color: #1b2859;
-  gap: 5px;
-  height: 2rem;
-}
-
-.contact a svg {
-  height: 20px;
-  width: 20px;
 }
 
 .button {
@@ -448,8 +427,10 @@ form button {
 }
 
 .benefit svg {
-  height: 30%;
-  width: 30%;
+  height: 100%;
+  width: 100%;
+  max-width: 90px;
+  max-height: 90px;
 }
 
 .benefit-text {
@@ -473,10 +454,18 @@ form button {
   height: auto;
 }
 
+.slide-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
 .testimonial-card {
   max-width: 300px;
   padding: 30px;
   background-color: #f9fbfc;
+  min-width: 250px;
+  flex: 0 0 auto;
 }
 
 #testimonials p {
@@ -508,10 +497,10 @@ form button {
 }
 
 .dot {
-  height: 0.5rem;
-  width: 0.5rem;
+  height: 0.7rem;
+  width: 0.7rem;
   margin: 0 6px;
-  background-color: #304ba4;
+  background-color: #a3a8b5;
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
@@ -519,24 +508,16 @@ form button {
 }
 
 .dot.active {
-  background-color: #c0392b;
+  background-color: #304ba4;
+  transform: none;
 }
 
 .slide-group {
   display: flex;
+  flex-shrink: 0;
+  width: 100%; /* Cada grupo ocupa 100% da largura do slider */
   gap: 15px;
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: opacity 0.5s ease;
-}
-
-.slide-group.active {
-  opacity: 1;
-  visibility: visible;
-  position: relative;
+  justify-content: center;
 }
 
 /* BRANDS */
@@ -621,7 +602,7 @@ form button {
 }
 
 .faq-answer.active {
-  max-height: 150px;
+  max-height: 200px;
 }
 
 .faq-content {
@@ -711,9 +692,9 @@ footer h3 {
     gap: 1.5rem;
   }
 
-  .logo svg {
+  .logo img {
     height: auto;
-    max-width: 100%;
+    max-width: 80%;
     padding: 0;
     margin: auto;
   }
@@ -722,32 +703,49 @@ footer h3 {
     font-size: 1rem;
   }
 
-  .contacts {
+  /* HERO SECTION */
+  #hero {
+    display: flex;
     flex-direction: column;
-    border-bottom: none;
-    gap: 0.8rem;
-  }
-
-  .contact {
-    border-bottom: 1px solid #333;
-    width: 100%;
+    justify-content: center;
+    margin: 0 auto;
     text-align: center;
   }
 
-  .contact a {
-    font-size: 1rem;
-    display: inline-block;
-    width: 100%;
+  #hero h1 {
+    font-size: 1.8rem;
   }
 
-  /* HERO SECTION */
+  #hero p {
+    font-size: 1.2rem;
+  }
+
+  .hero-services {
+    gap: 0.5rem;
+  }
+
+  .hero-services span {
+    font-size: 0.9rem;
+  }
+
+  .hero-services span::before {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+
+  #hero .hero-buttons {
+    margin: 0 auto;
+    max-width: fit-content;
+  }
+
   .hero-content {
     padding: 1rem;
     margin: 0 auto;
   }
 
   .hero-img::before {
-    background: linear-gradient(to bottom, #dcdcdc 10%, transparent 40%);
+    background: linear-gradient(to bottom, #dcdcdc 10%, transparent 25%);
   }
 
   .hero-content h1 {
@@ -859,5 +857,116 @@ footer h3 {
 
   .rights p {
     font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 995px) {
+  #brands-we-attend {
+    margin: 5rem 0;
+    text-align: center;
+  }
+
+  .hero-services {
+    gap: 0.5rem;
+  }
+
+  .hero-services span {
+    font-size: 0.9rem;
+  }
+
+  .logo img {
+    margin: 0;
+  }
+  nav a p {
+    font-size: 1.1rem;
+    margin: 0;
+    width: min-content;
+  }
+
+  .header-content {
+    gap: 10px;
+  }
+
+  .brand-logos img {
+    max-width: 90px;
+  }
+
+  .faq-img img {
+    max-width: 400px;
+  }
+
+  .hero-content {
+    margin: 0;
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 995px) and (max-width: 1200px) {
+  #brands-we-attend {
+    margin: 5rem 0;
+    text-align: center;
+  }
+  .hero-services {
+    gap: 0.5rem;
+  }
+  .hero-services span {
+    font-size: 0.9rem;
+  }
+
+  .brand-logos img {
+    max-width: 120px;
+  }
+
+  .faq-img img {
+    max-width: 400px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .faq-img img {
+    max-width: 400px;
+  }
+  .hero-services span {
+    font-size: 0.9rem;
+  }
+  .header-content nav p {
+    font-size: 1.2rem;
+  }
+
+  .logo img {
+    margin: 0;
+    height: 50%;
+  }
+
+  .logo {
+    max-width: min-content;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 380px) {
+  .hero-content h1 {
+    font-size: 1.3rem;
+  }
+  #hero {
+    padding: 0;
+    margin: 0;
+    height: auto;
+  }
+  .hero-img img {
+    height: 100%;
+  }
+  .hero-services {
+    gap: 0.5rem;
+  }
+
+  .hero-services span {
+    font-size: 0.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .header-content {
+    gap: 12px;
   }
 }
