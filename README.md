@@ -4,7 +4,7 @@ Projeto de site simples mas eficiente para meu avô, feito com HTML, CSS e JS pu
 
 ## Status do Projeto
 
-🚧 Em desenvolvimento: metade do HTML pronto
+🚧 Em desenvolvimento: Em fase de ajustes para hospedagem
 
 ## Objetivo
 

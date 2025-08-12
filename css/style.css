@@ -24,6 +24,7 @@ h1 {
 p {
   font-size: 1.25rem;
   color: #1b2859;
+  text-decoration: none;
 }
 
 span {
@@ -79,10 +80,6 @@ nav a p {
   font-weight: 600;
   font-size: 1.4rem;
   color: #304ba4;
-}
-
-nav a p:hover {
-  border-bottom: 2px solid #c0392b;
 }
 
 .button {
@@ -343,6 +340,10 @@ form button {
   border-radius: 50%;
 }
 
+#btnSubmit{
+  background-color: #3249a7;
+}
+
 /* REPUTATION SECTION*/
 
 #reputation {
@@ -515,7 +516,7 @@ form button {
 .slide-group {
   display: flex;
   flex-shrink: 0;
-  width: 100%; /* Cada grupo ocupa 100% da largura do slider */
+  width: 100%; 
   gap: 15px;
   justify-content: center;
 }
