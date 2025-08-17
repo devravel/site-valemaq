@@ -25,6 +25,7 @@ p {
   font-size: 1.25rem;
   color: #1b2859;
   text-decoration: none;
+  letter-spacing: 0.1rem;
 }
 
 span {
@@ -78,8 +79,14 @@ nav {
 
 nav a p {
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
   color: #304ba4;
+}
+
+nav a p:hover {
+  transform: scale(1.2);
 }
 
 .button {
@@ -340,7 +347,7 @@ form button {
   border-radius: 50%;
 }
 
-#btnSubmit{
+#btnSubmit {
   background-color: #3249a7;
 }
 
@@ -516,7 +523,7 @@ form button {
 .slide-group {
   display: flex;
   flex-shrink: 0;
-  width: 100%; 
+  width: 100%;
   gap: 15px;
   justify-content: center;
 }
@@ -828,6 +835,11 @@ footer h3 {
   #faq img {
     align-self: normal;
     width: 100%;
+  }
+
+  .faq-question,
+  .faq-answer p {
+    letter-spacing: 0.1rem;
   }
 
   footer {
