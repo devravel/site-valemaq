@@ -983,3 +983,16 @@ footer h3 {
     gap: 12px;
   }
 }
+
+
+@media screen and (max-width: 550px) {
+  .hero-img{
+    display: none;
+  }
+  #hero{
+    height: 60vh;
+  }
+  .hero-content{
+    margin-top: 4.5rem;
+  }
+}
