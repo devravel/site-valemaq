@@ -248,6 +248,23 @@
               required
               maxlength="500"
             ></textarea>
+            <label class="checkbox-container">
+              <input type="checkbox" required />
+              <p>
+                Concordo com o uso dos meus dados para fins de contato, conforme
+                a<a
+                  style="
+                    padding: 0;
+                    margin: 0;
+                    font-size: inherit;
+                    color: inherit;
+                  "
+                  href="politicaprivacidade.html"
+                >
+                  Política de Privacidade</a
+                >
+              </p>
+            </label>
             <input type="text" name="_honey" style="display: none" />
             <button type="submit" id="btnSubmit" class="button" id="button2">
               Solicitar ligação de volta
@@ -292,15 +309,25 @@
       </div>
       <div class="benefit">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90">
-  <path d="M87.1628 89.0201C87.7317 88.4493 88.1935 87.9874 88.1935 87.9874L89.2243 86.9548C89.7932 86.3821 88.8204 83.7419 87.05 81.057L82.5093 74.1633C80.7389 71.4785 77.9413 69.0131 76.2583 68.6599C74.5753 68.3045 73.2104 68.0172 73.2104 68.0172L59.5263 54.3388L54.5449 59.324L68.2176 73.0043L68.8641 76.0522C69.2194 77.7333 71.6867 80.5347 74.3716 82.3032L81.2691 86.8497C83.9537 88.6182 86.5939 89.5909 87.1628 89.0201Z" fill="#010002"/>
-  <path d="M3.24992 17.7201L23.5832 38.0533L26.1224 40.5868C26.1806 40.6489 26.237 40.6818 26.2931 40.7401L29.6515 37.3796L5.66682 13.3947C5.08242 12.8163 5.08242 11.8669 5.66682 11.2942C6.24525 10.7079 7.18097 10.7079 7.76728 11.2942L31.7443 35.2849L35.4852 31.5363L11.5003 7.55521C10.914 6.97487 10.914 6.0351 11.5003 5.45475C12.0788 4.87632 13.0205 4.87632 13.5932 5.45475L37.5895 29.4511L40.9421 26.0868C40.8917 26.0285 40.8547 25.9664 40.8024 25.9101L38.1369 23.2407L17.9338 3.04334C13.8805 -1.01786 7.30133 -1.01213 3.24968 3.04334C-0.809381 7.09524 -0.809381 13.6665 3.24992 17.7201Z" fill="#010002"/>
-  <path d="M89.733 19.5003C89.4884 16.2933 86.6541 15.67 84.3809 17.9434L76.4372 25.889C74.593 27.7469 71.5704 27.7411 69.7202 25.889L64.5738 20.7486C62.7102 18.8752 62.716 15.8622 64.5681 14.0025L72.7817 5.79675C75.057 3.52338 74.4802 0.586318 71.2869 0.205871C65.1097 -0.531857 58.6722 1.46567 53.9296 6.20442C50.3169 9.82309 48.2998 14.4374 47.8728 19.1626C47.702 21.0729 47.7914 23.0005 48.1348 24.8953L4.05165 68.982C1.72406 71.3115 0.43895 74.4041 0.43895 77.6984C0.43895 80.9851 1.72406 84.0736 4.04591 86.3992C8.84867 91.2001 16.6604 91.2001 21.471 86.3992C21.471 86.3992 53.1589 54.7154 65.991 41.8678C68.0081 42.1434 70.0503 42.1241 72.0595 41.8057C76.3032 41.1418 80.3818 39.1966 83.6568 35.9275C88.1625 31.4216 90.1834 25.3861 89.733 19.5003ZM16.9224 82.6117C14.4025 85.118 10.3492 85.1179 7.83701 82.606C5.33652 80.1115 5.33079 76.0386 7.84274 73.5381C10.349 71.0376 14.4023 71.0436 16.9145 73.5381C19.4152 76.0386 19.4152 80.1115 16.9224 82.6117Z" fill="#010002"/>
-</svg>
+          <path
+            d="M87.1628 89.0201C87.7317 88.4493 88.1935 87.9874 88.1935 87.9874L89.2243 86.9548C89.7932 86.3821 88.8204 83.7419 87.05 81.057L82.5093 74.1633C80.7389 71.4785 77.9413 69.0131 76.2583 68.6599C74.5753 68.3045 73.2104 68.0172 73.2104 68.0172L59.5263 54.3388L54.5449 59.324L68.2176 73.0043L68.8641 76.0522C69.2194 77.7333 71.6867 80.5347 74.3716 82.3032L81.2691 86.8497C83.9537 88.6182 86.5939 89.5909 87.1628 89.0201Z"
+            fill="#010002"
+          />
+          <path
+            d="M3.24992 17.7201L23.5832 38.0533L26.1224 40.5868C26.1806 40.6489 26.237 40.6818 26.2931 40.7401L29.6515 37.3796L5.66682 13.3947C5.08242 12.8163 5.08242 11.8669 5.66682 11.2942C6.24525 10.7079 7.18097 10.7079 7.76728 11.2942L31.7443 35.2849L35.4852 31.5363L11.5003 7.55521C10.914 6.97487 10.914 6.0351 11.5003 5.45475C12.0788 4.87632 13.0205 4.87632 13.5932 5.45475L37.5895 29.4511L40.9421 26.0868C40.8917 26.0285 40.8547 25.9664 40.8024 25.9101L38.1369 23.2407L17.9338 3.04334C13.8805 -1.01786 7.30133 -1.01213 3.24968 3.04334C-0.809381 7.09524 -0.809381 13.6665 3.24992 17.7201Z"
+            fill="#010002"
+          />
+          <path
+            d="M89.733 19.5003C89.4884 16.2933 86.6541 15.67 84.3809 17.9434L76.4372 25.889C74.593 27.7469 71.5704 27.7411 69.7202 25.889L64.5738 20.7486C62.7102 18.8752 62.716 15.8622 64.5681 14.0025L72.7817 5.79675C75.057 3.52338 74.4802 0.586318 71.2869 0.205871C65.1097 -0.531857 58.6722 1.46567 53.9296 6.20442C50.3169 9.82309 48.2998 14.4374 47.8728 19.1626C47.702 21.0729 47.7914 23.0005 48.1348 24.8953L4.05165 68.982C1.72406 71.3115 0.43895 74.4041 0.43895 77.6984C0.43895 80.9851 1.72406 84.0736 4.04591 86.3992C8.84867 91.2001 16.6604 91.2001 21.471 86.3992C21.471 86.3992 53.1589 54.7154 65.991 41.8678C68.0081 42.1434 70.0503 42.1241 72.0595 41.8057C76.3032 41.1418 80.3818 39.1966 83.6568 35.9275C88.1625 31.4216 90.1834 25.3861 89.733 19.5003ZM16.9224 82.6117C14.4025 85.118 10.3492 85.1179 7.83701 82.606C5.33652 80.1115 5.33079 76.0386 7.84274 73.5381C10.349 71.0376 14.4023 71.0436 16.9145 73.5381C19.4152 76.0386 19.4152 80.1115 16.9224 82.6117Z"
+            fill="#010002"
+          />
+        </svg>
 
         <div class="benefit-text">
           <h3>Apenas peças originais</h3>
           <p>
-           Toda manutenção ou troca de peça de seu eletrodoméstico será realizada usando peças autênticas e originais. 
+            Toda manutenção ou troca de peça de seu eletrodoméstico será
+            realizada usando peças autênticas e originais.
           </p>
         </div>
       </div>
@@ -535,7 +562,9 @@
                 d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
               />
             </svg>
-            <a href="mailto:daniloalves@gmail.com">valemaq@gmail.com</a>
+            <a href="mailto:daniloalves@gmail.com"
+              >valemaqcontato@valemaqrefrigeracao.com.br</a
+            >
           </div>
           <div class="footer-contact">
             <p>
@@ -557,6 +586,16 @@
             </p>
           </div>
         </div>
+        <div>
+          <p>
+            <a
+              href="politicaprivacidade.html"
+              target="_blank"
+              style="color: #c0392b"
+              >Política de Privacidade</a
+            >
+          </p>
+        </div>
         <div class="by-me">
           <p>
             Desenvolvido por:
@@ -568,7 +607,7 @@
           </p>
         </div>
         <div class="rights">
-          <p>&copy; <strong>ValeMaq</strong>. Todos os direitos reservados.</p>
+          <p>&copy; <strong>VALEMAQ</strong>. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
@@ -581,6 +620,59 @@
       };
 
       IMask(phoneInput, maskOptions);
+    </script>
+
+    <div
+      id="cookie-banner"
+      style="
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #e1e5f1;
+        color: #fff;
+        padding: 1rem;
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      "
+    >
+      <span
+        >Usamos cookies para melhorar sua experiência. Ao continuar navegando,
+        você concorda com nossa
+        <a href="politicaprivacidade.html" style="color: #3249a7" id="politica"
+          >Política de Privacidade</a
+        >.</span
+      >
+      <button
+        id="accept-cookie"
+        style="
+          margin-left: 1rem;
+          padding: 0.5rem 1rem;
+          border: none;
+          background: #c0392b;
+          color: white;
+          cursor: pointer;
+        "
+      >
+        OK
+      </button>
+    </div>
+
+    <script>
+      const cookieBanner = document.getElementById("cookie-banner");
+      const acceptBtn = document.getElementById("accept-cookie");
+
+      if (localStorage.getItem("cookiesAccepted")) {
+        cookieBanner.style.display = "none";
+      }
+
+      acceptBtn.addEventListener("click", () => {
+        localStorage.setItem("cookiesAccepted", "true");
+        cookieBanner.style.display = "none";
+      });
     </script>
   </body>
 </html>

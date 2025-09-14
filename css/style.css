@@ -984,15 +984,55 @@ footer h3 {
   }
 }
 
-
 @media screen and (max-width: 550px) {
-  .hero-img{
+  .hero-img {
     display: none;
   }
-  #hero{
+  #hero {
     height: 60vh;
   }
-  .hero-content{
+  .hero-content {
     margin-top: 4.5rem;
   }
+}
+
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: #222;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  z-index: 9999;
+}
+
+.cookie-banner a {
+  color: #4da6ff;
+  text-decoration: underline;
+}
+
+.cookie-banner button {
+  background: #4da6ff;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkbox-container {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-container p {
+  font-size: 0.71rem;
 }
