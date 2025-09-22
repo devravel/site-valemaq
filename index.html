@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +15,6 @@
       href="https://fonts.googleapis.com/css2?family=Jost:ital@0;1&display=swap"
       rel="stylesheet"
     />
-    <script src="script.js" defer></script>
     <title>ValeMaq - Serviços de refrigeração</title>
   </head>
   <body>
@@ -32,10 +32,19 @@
             <img src="images/logo.svg" alt="ValeMaq" />
           </div>
         </a>
+        <div class="off-screen-menu">
+          <ul>
+            <li><a href="#types">Serviços</a></li>
+            <li><a href="#reputation">Sobre</a></li>
+            <li><a href="#faq">Perguntas frequentes</a></li>
+          </ul>
+        </div>
         <nav>
-          <a href="#types"><p>Modelos</p></a>
-          <a href="#reputation"><p>Quem somos</p></a>
-          <a href="#faq"><p>Perguntas frequentes</p></a>
+          <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </nav>
       </div>
     </header>
@@ -44,14 +53,15 @@
       <div class="hero-content">
         <h1>EXCELÊNCIA EM SERVIÇOS DE REFRIGERAÇÃO</h1>
         <p>
-          Problemas com sua geladeira ou máquina de lavar? A ValeMaq está pronta
-          para te ajudar.
+          Assistência técnica especializada em Lavadoras de roupas e Geladeiras
+          de todos os modelos, balcões frigoríficos e mais! Técnico treinado por
+          fabricante, pronto para te atender.
         </p>
         <div class="hero-services">
+          <span>Atendimento a domicílio</span>
+          <span>Instalação, conserto e limpeza</span>
           <span>Troca de placa</span>
-          <span>Ciclo de lavagem</span>
-          <span>Sensores de gelo</span>
-          <span>Análise de código de erro</span>
+          <span>Problemas com ciclo de lavagem</span>
         </div>
         <div class="hero-buttons">
           <a href="#about" class="button">Fazer um orçamento</a>
@@ -69,12 +79,10 @@
     </section>
     <section id="types">
       <div class="types-header">
-        <h2>
-          Serviços de conserto especializado em geladeiras e máquinas de lavar.
-        </h2>
+        <h2>Principais serviços</h2>
         <p>
-          Para o bom funcionamento de uma casa, é necessário uma geladeira e uma
-          máquina de lavar funcionando corretamente. Confira os principais
+          Para o bom funcionamento de uma casa, é necessário que os
+          eletrodomésticos estejam funcionando bem. Confira os principais
           modelos que consertamos:
         </p>
       </div>
@@ -563,7 +571,7 @@
               />
             </svg>
             <a href="mailto:daniloalves@gmail.com"
-              >valemaqcontato@valemaqrefrigeracao.com.br</a
+              >contato@valemaqrefrigeracao.com.br</a
             >
           </div>
           <div class="footer-contact">
@@ -660,7 +668,6 @@
         OK
       </button>
     </div>
-
     <script>
       const cookieBanner = document.getElementById("cookie-banner");
       const acceptBtn = document.getElementById("accept-cookie");
