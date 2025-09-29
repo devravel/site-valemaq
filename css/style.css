@@ -6,6 +6,7 @@
   list-style: none;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -65,10 +66,12 @@ header {
 .header-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
+
 .logo img {
-  padding-left: 10rem;
+  width: auto;
+  height: 4rem;
 }
 
 .off-screen-menu ul {
@@ -225,7 +228,7 @@ header {
 
 .card p {
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 2;
   text-align: center;
   color: #d4d7ec;
   font-weight: bold;
@@ -332,7 +335,8 @@ form button {
   cursor: pointer;
 }
 
-.more-about {
+.more-about,
+.more-about2 {
   display: flex;
   flex-direction: column;
 }
@@ -345,6 +349,20 @@ form button {
   margin-right: 5px;
   background-color: #3249a7;
   border-radius: 50%;
+}
+
+.more-about2 p::before {
+  display: inline-block;
+  content: " ";
+  width: 8px;
+  height: 8px;
+  margin-right: 5px;
+  background-color: #3249a7;
+  border-radius: 50%;
+}
+
+.more-about2 p::before {
+  background-color: #c0392b;
 }
 
 #btnSubmit {
@@ -1152,16 +1170,16 @@ footer h3 {
 
 @media screen and (max-width: 995px) {
   .off-screen-menu {
+    padding: 1rem;
+    top: 0;
     height: 100vh;
     width: 100%;
-    max-width: 450px;
+    max-width: 350px;
     position: fixed;
-    top: 0;
     right: -450px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
     font-size: 3rem;
     transition: 0.3s ease;
@@ -1206,6 +1224,9 @@ footer h3 {
   .ham-menu.active span:nth-child(3) {
     top: 50%;
     transform: translate(-50%, 50%) rotate(-45deg);
+  }
+  .off-screen-menu ul {
+    flex-direction: column;
   }
 }
 .off-screen-menu {
