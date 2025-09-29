@@ -41,43 +41,41 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document
-  .getElementsByClassName("about-form")
-  .addEventListener("submit", function (e) {
-    e.preventDefault();
+document.querySelector("#contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-    const btn = document.getElementById("btnSubmit");
-    const form = e.target;
+  const btn = document.getElementById("btnSubmit");
+  const form = e.target;
 
-    btn.disabled = true;
-    btn.textContent = "Enviando...";
-    btn.style.backgroundColor = "";
-    btn.style.color = "white";
+  btn.disabled = true;
+  btn.textContent = "Enviando...";
+  btn.style.backgroundColor = "";
+  btn.style.color = "white";
 
-    fetch("enviar.php", {
-      method: "POST",
-      body: new FormData(form),
-    })
-      .then((response) => response.text())
-      .then((text) => {
-        if (text.toLowerCase().includes("sucesso")) {
-          btn.textContent = "Enviado!";
-          btn.style.backgroundColor = "#4bb543";
-          btn.style.color = "white";
-        } else {
-          btn.textContent = text;
-          btn.style.backgroundColor = "#cc0000";
-          btn.style.color = "white";
-          btn.disabled = false;
-        }
-      })
-      .catch(() => {
-        btn.textContent = "Erro no envio, tente novamente.";
+  fetch("enviar.php", {
+    method: "POST",
+    body: new FormData(form),
+  })
+    .then((response) => response.text())
+    .then((text) => {
+      if (text.toLowerCase().includes("sucesso")) {
+        btn.textContent = "Enviado!";
+        btn.style.backgroundColor = "#4bb543";
+        btn.style.color = "white";
+      } else {
+        btn.textContent = "Erro: " + text;
         btn.style.backgroundColor = "#cc0000";
         btn.style.color = "white";
         btn.disabled = false;
-      });
-  });
+      }
+    })
+    .catch(() => {
+      btn.textContent = "Erro no envio, tente novamente.";
+      btn.style.backgroundColor = "#cc0000";
+      btn.style.color = "white";
+      btn.disabled = false;
+    });
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const banner = document.getElementById("cookie-banner");

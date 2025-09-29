@@ -11,7 +11,12 @@
       name="google-site-verification"
       content="iXXFmP--1JMauVshnIGA1Hzi2U7e_dheyTN8i-eVBkc"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="css/style.css"
+      media="print"
+      onload="this.media='all'"
+    />
     <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,6 +28,733 @@
       href="https://fonts.googleapis.com/css2?family=Jost:ital@0;1&display=swap"
       rel="stylesheet"
     />
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Jost", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        overflow-x: hidden;
+      }
+      h1 {
+        font-size: 2.5rem;
+        color: #3249a7;
+      }
+
+      p {
+        font-size: 1.25rem;
+        color: #1b2859;
+        text-decoration: none;
+        letter-spacing: 0.1rem;
+      }
+
+      span {
+        color: #1b2859;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 40px;
+        background-color: #25d366;
+        color: #fff;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        z-index: 100;
+      }
+
+      .my-float {
+        margin-top: 16px;
+      }
+
+      header {
+        padding: 1rem;
+        background-color: #e1e5f1;
+      }
+
+      .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .logo img {
+        width: auto;
+        height: 4rem;
+      }
+
+      .off-screen-menu ul {
+        display: flex;
+        gap: 40px;
+      }
+      .off-screen-menu ul li {
+        transition: transform 0.3s ease;
+      }
+      .off-screen-menu ul a {
+        font-weight: 600;
+        font-size: 1.4rem;
+        color: #3249a7;
+      }
+
+      .off-screen-menu ul li:hover {
+        transform: scale(1.2);
+      }
+
+      .button {
+        background-color: #c0392b;
+        color: white;
+        padding: 8px 18px;
+        margin-bottom: 1rem;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: transform 0.2s;
+      }
+
+      .button:hover {
+        transform: translateY(-5px);
+      }
+
+      /*HERO SECTION*/
+
+      #hero {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        height: auto;
+        background: linear-gradient(to right, #d9dcdb, #dcdcdc);
+      }
+
+      .hero-content {
+        flex: 1 1 400px;
+        z-index: 2;
+        padding-left: 10rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .hero-img {
+        flex: 1 1 400px;
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .hero-img::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, #dcdcdc 10%, transparent 40%);
+        z-index: 1;
+      }
+
+      .hero-img img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        position: relative;
+        z-index: 0;
+      }
+
+      .hero-services {
+        display: flex;
+        gap: 1rem;
+        margin: 30px 0;
+        list-style: none;
+      }
+      .hero-services span {
+        max-width: 100px;
+      }
+
+      .hero-services span::before {
+        display: inline-block;
+        content: " ";
+        width: 8px;
+        height: 8px;
+        margin-right: 5px;
+        background-color: #3249a7;
+        border-radius: 50%;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      #button2 {
+        background-color: #2f4ba4;
+      }
+
+      #button3 {
+        background: #fff;
+        color: #435399;
+      }
+      /* MOBILE STYLES - até 768px */
+      @media screen and (max-width: 768px) {
+        /* HEADER SECTION */
+        header {
+          padding-bottom: 1rem;
+        }
+        .header-content {
+          align-items: center;
+          text-align: center;
+          justify-content: space-around;
+        }
+
+        .logo img {
+          height: 3.5rem;
+          max-width: 100%;
+          padding: 0;
+          margin: auto;
+        }
+
+        nav a p {
+          font-size: 1rem;
+        }
+
+        /* HERO SECTION */
+        #hero {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        #hero h1 {
+          font-size: 1.8rem;
+        }
+
+        #hero p {
+          font-size: 1.2rem;
+        }
+
+        .hero-services {
+          gap: 0.5rem;
+        }
+
+        .hero-services span {
+          font-size: 0.9rem;
+        }
+
+        .hero-services span::before {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+        }
+
+        #hero .hero-buttons {
+          margin: 0 auto;
+          max-width: fit-content;
+        }
+
+        .hero-content {
+          padding: 1rem;
+          margin: 0 auto;
+        }
+
+        .hero-img::before {
+          background: linear-gradient(to bottom, #dcdcdc 10%, transparent 25%);
+        }
+
+        .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        #about {
+          padding: 2rem 1rem;
+        }
+
+        .about-content {
+          flex-direction: column;
+        }
+
+        .about-text p {
+          line-height: 2;
+        }
+
+        #reputation {
+          padding: 2rem 1rem;
+          width: 100%;
+          height: auto;
+        }
+
+        #reputation img {
+          display: none;
+        }
+
+        #benefits {
+          width: 100%;
+          gap: 1.5rem;
+          height: auto;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .benefit {
+          padding: 1rem;
+        }
+
+        .benefit p {
+          line-height: 1.5;
+          font-size: 1.2rem;
+        }
+
+        .benefit svg {
+          width: 100%;
+          max-height: 80px;
+        }
+
+        .testimonials-slider {
+          position: static;
+          width: 100%;
+          max-width: 100vw;
+        }
+
+        .slide-group {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        #brands-we-attend {
+          padding: 0;
+        }
+
+        .brand-logos {
+          flex-direction: column;
+          padding: 1.2rem;
+          height: fit-content;
+          margin: 0;
+          align-items: center;
+        }
+
+        #faq {
+          padding: 1.5rem;
+          flex-direction: column-reverse;
+        }
+
+        #faq img {
+          align-self: normal;
+          width: 100%;
+        }
+
+        .faq-question,
+        .faq-answer p {
+          letter-spacing: 0.1rem;
+        }
+
+        footer {
+          max-width: 100%;
+        }
+
+        .footer-content {
+          max-width: fit-content;
+          gap: 0;
+        }
+
+        .footer-contacts p,
+        .footer-contacts a {
+          font-size: 1rem;
+        }
+
+        .footer-contacts {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        .by-me p {
+          margin: 1rem 0;
+          font-size: 1rem;
+        }
+
+        .rights p {
+          font-size: 1rem;
+        }
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 995px) {
+        #brands-we-attend {
+          margin: 5rem 0;
+          text-align: center;
+        }
+
+        .hero-services {
+          gap: 0.5rem;
+        }
+
+        .hero-services span {
+          font-size: 0.9rem;
+        }
+
+        .logo img {
+          margin: 0;
+        }
+        nav a p {
+          font-size: 1.1rem;
+          margin: 0;
+          width: min-content;
+        }
+
+        .header-content {
+          gap: 10px;
+        }
+
+        .brand-logos img {
+          max-width: 90px;
+        }
+
+        .faq-img img {
+          max-width: 400px;
+        }
+
+        .hero-content {
+          margin: 0 auto;
+          padding: 1rem;
+          justify-content: space-between;
+        }
+        #hero {
+          flex-direction: column;
+        }
+        .hero-img::before {
+          background: linear-gradient(to bottom, #dcdcdc 10%, transparent 25%);
+        }
+      }
+
+      @media screen and (min-width: 995px) and (max-width: 1200px) {
+        #brands-we-attend {
+          margin: 5rem 0;
+          text-align: center;
+        }
+        .hero-services {
+          gap: 0.5rem;
+        }
+        .hero-services span {
+          font-size: 0.9rem;
+        }
+
+        .brand-logos img {
+          max-width: 120px;
+        }
+
+        .faq-img img {
+          max-width: 400px;
+        }
+        .hero-content {
+          margin: 0 auto;
+          padding: 1rem 5rem;
+          justify-content: space-between;
+        }
+        #hero h1 {
+          font-size: 1.8rem;
+        }
+        #hero p {
+          font-size: 1.2rem;
+        }
+        #hero {
+          flex-direction: row;
+        }
+        .hero-img::before {
+          background: linear-gradient(to right #dcdcdc 10%, transparent 25%);
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        .faq-img img {
+          max-width: 100%;
+        }
+        .hero-services span {
+          font-size: 0.9rem;
+        }
+        .header-content nav p {
+          font-size: 1.2rem;
+        }
+
+        .logo img {
+          margin-left: 4.5rem;
+          height: 4.5rem;
+        }
+
+        .logo {
+          max-width: min-content;
+        }
+        .hero-content {
+          padding: 0;
+          margin-left: 1rem;
+          max-width: 100vw;
+        }
+        #hero {
+          padding-left: 10rem;
+          height: 80vh;
+          width: 100%;
+        }
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 460px) {
+        .hero-content h1 {
+          font-size: 1rem;
+        }
+        #hero {
+          padding: 0;
+          margin: 0;
+          height: 100vh;
+        }
+        header {
+          padding: 0.8rem;
+        }
+        .hero-services {
+          gap: 0.5rem;
+        }
+
+        .hero-services span {
+          font-size: 0.8rem;
+        }
+
+        .hero-content p {
+          font-size: 0.8rem;
+        }
+
+        .hero-content {
+          padding: 0;
+          margin: 1rem;
+        }
+        .hero-buttons a {
+          font-size: 1rem;
+        }
+        .header-content {
+          justify-content: space-around;
+        }
+      }
+
+      @media screen and (max-width: 550px) {
+        .hero-img {
+          display: none;
+        }
+        #hero {
+          height: 60vh;
+        }
+        .hero-content {
+          margin: 3rem 0;
+        }
+      }
+
+      @media screen and (max-width: 404px) {
+        .hero-buttons a {
+          font-size: 0.85rem;
+        }
+        .hero-content {
+          padding: 1rem;
+          margin: 0;
+        }
+
+        #hero {
+          margin: 0;
+          padding: 0;
+          gap: 10px;
+        }
+
+        #hero h1 {
+          font-size: 1.1rem;
+        }
+
+        #hero p {
+          font-size: 1rem;
+        }
+      }
+
+      @media screen and (max-width: 387px) {
+        .hero-services span {
+          font-size: 0.6rem;
+        }
+        .hero-buttons a {
+          font-size: 0.7rem;
+        }
+        #hero p {
+          font-size: 0.8rem;
+        }
+        .hero-content {
+          padding: 1rem;
+          margin: 0 auto;
+        }
+        #hero {
+          height: auto;
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      @media screen and (max-width: 387px) {
+        #types p,
+        #reputation p,
+        #about p,
+        #benefits p,
+        #testimonials p,
+        #brands-we-attend p,
+        #faq p {
+          font-size: 0.85rem;
+        }
+        #types h2,
+        #types h3,
+        #reputation h2,
+        #about h2,
+        #benefits h3,
+        #testimonials h2,
+        #brands-we-attend h2,
+        #faq h2 {
+          font-size: 1.1rem;
+        }
+        .brand-logos img {
+          width: 30%;
+        }
+        .faq-question {
+          font-size: 0.8rem;
+        }
+      }
+
+      .cookie-banner {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        background: #222;
+        color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        z-index: 9999;
+      }
+
+      .cookie-banner a {
+        color: #4da6ff;
+        text-decoration: underline;
+      }
+
+      .cookie-banner button {
+        background: #4da6ff;
+        border: none;
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .checkbox-container {
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .checkbox-container p {
+        font-size: 0.71rem;
+      }
+
+      @media screen and (max-width: 420px) {
+        .header-content {
+          flex-direction: row;
+        }
+      }
+
+      @media screen and (max-width: 995px) {
+        .off-screen-menu {
+          padding: 1rem;
+          top: 0;
+          height: 100vh;
+          width: 100%;
+          max-width: 350px;
+          position: fixed;
+          right: -450px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          font-size: 3rem;
+          transition: 0.3s ease;
+        }
+        .off-screen-menu.active {
+          right: 0;
+          background-color: #e1e5f1;
+        }
+        .ham-menu {
+          height: 50px;
+          width: 50px;
+          margin-left: auto;
+          position: relative;
+        }
+        .ham-menu span {
+          height: 5px;
+          width: 100%;
+          background-color: #3249a7;
+          border-radius: 25px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: 0.3s ease;
+        }
+        .ham-menu span:nth-child(1) {
+          top: 25%;
+        }
+        .ham-menu span:nth-child(3) {
+          top: 75%;
+        }
+
+        .ham-menu.active span:nth-child(1) {
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .ham-menu.active span:nth-child(2) {
+          opacity: 0;
+        }
+
+        .ham-menu.active span:nth-child(3) {
+          top: 50%;
+          transform: translate(-50%, 50%) rotate(-45deg);
+        }
+        .off-screen-menu ul {
+          flex-direction: column;
+        }
+      }
+      .off-screen-menu {
+        z-index: 9999;
+      }
+      .ham-menu {
+        z-index: 10000;
+      }
+    </style>
     <title>ValeMaq - Serviços de refrigeração</title>
   </head>
   <body>
@@ -64,8 +796,9 @@
         <h1>EXCELÊNCIA EM SERVIÇOS DE REFRIGERAÇÃO</h1>
         <p>
           Assistência técnica especializada em Lavadoras de roupas e Geladeiras
-          de todos os modelos, balcões frigoríficos e mais! Técnico treinado por
-          fabricante, pronto para te atender.
+          de todos os modelos, balcões frigoríficos e mais!
+          <strong>Técnico treinado por fabricante</strong>, pronto para te
+          atender.
         </p>
         <div class="hero-services">
           <span>Atendimento a domicílio</span>
@@ -123,14 +856,14 @@
           </div>
         </div>
         <div class="card">
-          <h3>Fornos, coifos e frigoríficos</h3>
+          <h3>Fornos, coifas e frigoríficos</h3>
           <img
-            src="./images/services-section/fornos-coifos-frigorificos.webp"
+            src="./images/services-section/fornos-coifas-frigorificos.png"
             alt="Geladeira side-by-side"
           />
           <div class="more-about2">
             <p>FORNOS E COOKTOPS</p>
-            <p>COIFOS E DEPURADORES</p>
+            <p>COIFAS E DEPURADORES</p>
             <p>BALCÕES FRIGORÍFICOS</p>
           </div>
         </div>
@@ -206,60 +939,62 @@
           </div>
         </div>
         <div class="about-form">
-          <form action="email.php" method="POST">
+          <form id="contactForm">
             <label for="nome">Nome</label>
             <input
               type="text"
-              placeholder="Seu nome aqui"
+              name="nome"
               id="nome"
-              gi
+              placeholder="Seu nome aqui"
               required
               maxlength="15"
             />
+
             <label for="email">Email</label>
             <input
               type="email"
-              placeholder="Seu email aqui"
+              name="email"
               id="email"
+              placeholder="Seu email aqui"
               required
               maxlength="200"
             />
+
             <label for="phone">Telefone</label>
             <input
               type="text"
-              placeholder="(11) 22222-3333"
+              name="phone"
               id="phone"
+              placeholder="(11) 22222-3333"
               required
             />
-            <label for="description">Descrição</label>
+
+            <label for="mensagem">Descrição</label>
             <textarea
-              name="description"
+              name="mensagem"
+              id="mensagem"
               placeholder="Descreva o problema"
-              id="description"
               required
               maxlength="500"
             ></textarea>
+
             <label class="checkbox-container">
               <input type="checkbox" required />
               <p>
                 Concordo com o uso dos meus dados para fins de contato, conforme
-                a<a
-                  style="
-                    padding: 0;
-                    margin: 0;
-                    font-size: inherit;
-                    color: inherit;
-                  "
-                  href="politicaprivacidade.html"
-                >
-                  Política de Privacidade</a
+                a
+                <a href="politicaprivacidade.html" class="priv-link"
+                  >Política de Privacidade</a
                 >
               </p>
             </label>
+
             <input type="text" name="_honey" style="display: none" />
-            <button type="submit" id="btnSubmit" class="button" id="button2">
+
+            <button type="submit" id="btnSubmit" class="button">
               Solicitar ligação de volta
             </button>
+
             <p>
               Após o envio deste formulário, entraremos em contato em até 24h.
             </p>
