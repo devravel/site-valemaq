@@ -259,6 +259,7 @@
 
         .hero-services {
           gap: 0.5rem;
+          justify-content: center;
         }
 
         .hero-services span {
@@ -459,7 +460,7 @@
           gap: 0.5rem;
         }
         .hero-services span {
-          font-size: 0.9rem;
+          font-size: 0.85rem;
         }
 
         .brand-logos img {
@@ -467,12 +468,11 @@
         }
 
         .faq-img img {
-          max-width: 400px;
+          max-width: 500px;
         }
         .hero-content {
           margin: 0 auto;
-          padding: 1rem 5rem;
-          justify-content: space-between;
+          padding: 1rem 3rem;
         }
         #hero h1 {
           font-size: 1.8rem;
@@ -519,14 +519,31 @@
         }
       }
 
+      @media screen and (max-width: 550px) {
+        .hero-img {
+          display: none;
+        }
+        .logo img {
+          height: 3rem;
+        }
+        #hero {
+          height: 60vh;
+        }
+        .hero-content {
+          margin: 3rem 0;
+        }
+      }
       @media screen and (min-width: 320px) and (max-width: 460px) {
         .hero-content h1 {
           font-size: 1rem;
         }
+        .logo img {
+          height: 2.5rem;
+        }
         #hero {
           padding: 0;
           margin: 0;
-          height: 100vh;
+          height: 70vh;
         }
         header {
           padding: 0.8rem;
@@ -552,18 +569,6 @@
         }
         .header-content {
           justify-content: space-around;
-        }
-      }
-
-      @media screen and (max-width: 550px) {
-        .hero-img {
-          display: none;
-        }
-        #hero {
-          height: 60vh;
-        }
-        .hero-content {
-          margin: 3rem 0;
         }
       }
 
@@ -796,16 +801,17 @@
       <div class="hero-content">
         <h1>EXCELÊNCIA EM SERVIÇOS DE REFRIGERAÇÃO</h1>
         <p>
-          Assistência técnica especializada em Lavadoras de roupas e Geladeiras
-          de todos os modelos, balcões frigoríficos e mais!
+          Assistência técnica especializada em
+          <strong>Lavadoras</strong>, <strong>Geladeiras</strong>,
+          <strong>balcões frigoríficos</strong> e mais!
           <strong>Técnico treinado por fabricante</strong>, pronto para te
           atender.
         </p>
         <div class="hero-services">
-          <span>Atendimento a domicílio</span>
           <span>Instalação, Conserto, Manutenção</span>
-          <span>Troca de placa</span>
-          <span>Problemas com ciclo de lavagem</span>
+          <span>Atendimento a domicílio</span>
+          <span>Refrigeração doméstica</span>
+          <span>Lavadoras em geral</span>
         </div>
         <div class="hero-buttons">
           <a href="#about" class="button">Fazer um orçamento</a>
